@@ -1,13 +1,8 @@
 %define module	uTidylib
-%define name	python-%{module}
-%define version	0.2
-%define release	%mkrel 2
 
-
-
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
+Name:           python-%{module}
+Version:        0.2
+Release:        %mkrel 3
 Summary:        Wrapper for HTML Tidy at http://tidy.sourceforge.net
 
 Group:          Development/Python
