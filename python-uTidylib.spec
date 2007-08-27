@@ -2,7 +2,7 @@
 
 Name:           python-%{module}
 Version:        0.2
-Release:        %mkrel 3
+Release:        %mkrel 4
 Summary:        Wrapper for HTML Tidy at http://tidy.sourceforge.net
 
 Group:          Development/Python
@@ -11,7 +11,7 @@ URL:            http://utidylib.berlios.de/
 Source0:        http://download.berlios.de/utidylib/%{module}-%{version}.tar.bz2
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildArch:      noarch
-BuildRequires:	python-devel 
+%py_requires -d
 Requires:	tidy python-ctypes
 
 %description
@@ -30,13 +30,10 @@ CFLAGS="$RPM_OPT_FLAGS" %{__python} setup.py build
 rm -rf $RPM_BUILD_ROOT
 %{__python} setup.py install -O1 --skip-build --root $RPM_BUILD_ROOT
 
-
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
-%{py_puresitedir}
+%{python_sitelib}/tidy
 %doc *.txt LICENSE
-
