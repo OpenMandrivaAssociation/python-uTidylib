@@ -36,4 +36,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root,-)
 %{python_sitelib}/tidy
+%{python_sitelib}/*.egg-info
 %doc *.txt LICENSE
