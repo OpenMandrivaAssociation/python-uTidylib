@@ -9,6 +9,7 @@ Group:          Development/Python
 License:        MIT
 URL:            http://utidylib.berlios.de/
 Source0:        http://download.berlios.de/utidylib/%{module}-%{version}.tar.bz2
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildArch:      noarch
 %py_requires -d
 Requires:	tidy python-ctypes
