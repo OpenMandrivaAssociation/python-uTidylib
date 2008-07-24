@@ -2,7 +2,7 @@
 
 Name:           python-%{module}
 Version:        0.2
-Release:        %mkrel 4
+Release:        %mkrel 6
 Summary:        Wrapper for HTML Tidy at http://tidy.sourceforge.net
 
 Group:          Development/Python
